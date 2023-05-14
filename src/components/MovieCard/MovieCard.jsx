@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import css from './MovieCard.module.css'
 
 const MovieCard = ({ movie }) => {
   const { title, release_date, poster_path, vote_average, overview, genres } =
@@ -25,47 +26,37 @@ const MovieCard = ({ movie }) => {
 
   return (
     <>
+      <div className={css.movieCardContainer}>
         <img src={posterUrl} alt={`${title} poster`} />
-
-        <div>
+      
+        <div >
           <h2> {title ?? 'Unknown'} ({releaseYear}) </h2>
-          <p>User Score: {userScore}</p>
-          <div>
-            <p> Overview: </p> {overview}
-          </div>
-
+          <h3 className={css.title}> User Score: </h3>
+          <p> {userScore}</p>
+          <h3 className={css.title}> Overview: </h3> 
+          <p> Overview: {overview} </p> 
+          <h3 cclassName={css.title}>Genres</h3>
           {genres && genres.length > 0 && (
-            <div>
-              <p>Genres:</p>
-              {genres.map(genre => genre.name).join(', ')}
-            </div>
+          <p>{genres.map(genre => genre.name).join(', ')} </p>
           )}
         </div>
+      </div>
 
-        <div>
-            <p>Additional information</p>
-
-        <ul>
+      <div className={css.movieCardInform}>
+        <h3>Additional information</h3>
+        <ul lassName={css.movieCardInformList}>
           <li>
-            <NavLink
-              to="cast"
-              state={{ from: location?.state?.from ?? '/' }}
-            >
+            <NavLink to="cast" state={{ from: location?.state?.from ?? '/' }}>
               Cast
             </NavLink>
           </li>
-
           <li>
-            <NavLink
-              to="reviews"
-              state={{ from: location?.state?.from ?? '/' }}
-            >
+            <NavLink to="reviews" state={{ from: location?.state?.from ?? '/' }}>
               Reviews
             </NavLink>
           </li>
         </ul>
-
-        </div>
+      </div>
     </>
   );
 };

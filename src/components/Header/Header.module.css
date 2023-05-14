@@ -1,0 +1,24 @@
+.header{
+    font-size: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+
+    background-color: rgb(175, 241, 241);
+  }
+  
+  .headerLink{
+    color: #0e0d0d;
+    font-weight: 500;
+    cursor: pointer;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  
+  }
+  
+  .headerLink:hover,:focus {
+    color: #108282;
+  }

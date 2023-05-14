@@ -1,0 +1,16 @@
+.movieCardContainer{
+ display: flex;
+ flex-direction: row;
+ gap: 25px;
+ font-size: 16px;
+}
+
+.title {
+   font-weight: bold; 
+}
+
+.movieCardInform {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}

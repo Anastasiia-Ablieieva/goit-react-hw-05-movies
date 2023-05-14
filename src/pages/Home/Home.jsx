@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { fetchTrendMovies } from "../../services/api";
 import MovieList from "components/MoviesList/MoviesList";
+// import css from './Home.module.css'
 
 const Home = () => {
     const [trendingMovies, setTrendingMovies] = useState([]);

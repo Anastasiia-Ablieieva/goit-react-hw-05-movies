@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-
 const MoviesList = ({ trendingMovies }) => {
     return (
+      <div>
+           <h2>Trending today</h2>
             <ul>
             {trendingMovies.map(trendingMovie => (
                     <li key={trendingMovie.id}>
@@ -13,6 +14,8 @@ const MoviesList = ({ trendingMovies }) => {
                     </li>
                 ))} 
             </ul>
+      </div>
+ 
     );   
 };
 

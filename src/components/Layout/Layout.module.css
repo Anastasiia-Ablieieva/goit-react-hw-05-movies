@@ -1,0 +1,9 @@
+.pageContainer{
+    margin-left: 70px;
+    margin-right: 60px;
+    padding: 30px;
+
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000;
+}
